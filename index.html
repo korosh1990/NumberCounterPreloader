@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Counter Preloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    <section>
+        <h2>Mojtaba Saberi<span>How To Create Number Counter Preloader</span></h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam saepe dolore delectus vero deleniti illo
+            consequuntur autem alias beatae assumenda aut natus quisquam recusandae magni, quo perspiciatis repellendus
+            blanditiis cum?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam saepe dolore delectus vero
+            deleniti illo
+            consequuntur autem alias beatae assumenda aut natus quisquam recusandae magni, quo perspiciatis repellendus
+            blanditiis cum?<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam saepe dolore
+            delectus vero deleniti illo consequuntur autem alias beatae assumenda aut natus quisquam recusandae magni,
+            quo perspiciatis repellendus blanditiis cum?</p>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        function counter() {
+            var count = setInterval(function(){
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if (c == 100) {
+                    clearInterval(count);
+                    $('.counter').addClass('hide')
+                    $('.preloader').addClass('active')
+                }
+            },60)
+        }
+        counter()
+    </script>
+</body>
+
+</html>
